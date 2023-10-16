@@ -15,8 +15,10 @@ body {
 .header__title {
   max-width: 300px;
   margin: 0 auto;
-  text-align: center;
+  align-items: center;
   background-color: white;
+  justify-content: center;
+  margin-right: 40px;
 }
 
 .header-right img {
@@ -24,38 +26,8 @@ body {
   margin: 0 auto;
 }
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: dimgray;
-  overflow: hidden;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-  display: grid;
-}
-
-.navbar a:hover {
-  background-color: black;
-}
-
-.navbar li {
-  float: left;
-}
-
-.navbar{
-  max-width: 25vw;
-  justify-self: left;
-
-}
-
 .header-left {
   background-color: lightskyblue;
-  border-style: solid;
-  border-width: 1px;
   display: grid;
 
   grid-auto-flow: column-reverse;
@@ -76,9 +48,7 @@ body {
 }
 
 .main-left {
-  background-color: snow;
-  border-style: solid;
-  border-width: 1px;
+  background-color: coral;
 }
 
 .main-right {
@@ -100,21 +70,19 @@ body {
 
 .footer-left {
   background-color: lightskyblue;
-  border-style: solid;
-  border-width: 1px;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 7fr;
+  grid-template-columns: 1fr 10fr;
   align-items: center;
 }
 
 .footer__title2 {
   text-align: center;
   background-color: white;
-  margin-right: 10px;
 }
 
 .footer-right {
+  display: grid;
   background-color: palegoldenrod;
-  text-align: center;
+  align-items: center;
 }
