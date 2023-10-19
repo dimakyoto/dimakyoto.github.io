@@ -1,0 +1,172 @@
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  font: normal 20px "Times New Roman", Times, serif;
+  grid-template-columns: 70% 5% 25%;
+  grid-template-areas: 
+  'header-left gap header-right'
+  'main-left gap main-right'
+  'footer-left gap footer-right'
+  ;
+}
+
+.gap{
+  grid-area: gap;
+  min-height: 100vh;
+}
+
+.header__title {
+  max-width: 300px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.header-right img {
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.photo {
+  align-self: center;
+  justify-self: center;
+}
+
+
+
+.header-left {
+  grid-area: header-left;
+  background-color: lightskyblue;
+  display: grid;
+  min-width: 25vh;
+  grid-auto-flow: column-reverse;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+}
+
+.header-right {
+  grid-area: header-right;
+  background-color: palegreen;
+  text-align: center;
+  min-height: 25vh;
+  display: grid;
+}
+
+.main-left {
+  grid-area: main-left;
+  min-height: 50vh;
+  background-color: coral;
+}
+
+.main-right {
+  grid-area: main-right;
+  background-color: palegreen;
+  min-height: 50vh;
+}
+
+.image-center {
+  height: 400px;
+  display: grid;
+  margin: auto;
+}
+
+.footer-left {
+  grid-area: footer-left;
+  min-height: 25vh;
+  background-color: lightskyblue;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+}
+
+.footer__title2 {
+  text-align: center;
+  background-color: white;
+}
+
+.footer-right {
+  grid-area: footer-right;
+  min-height: 25vh;
+  display: grid;
+  background-color: palegoldenrod;
+  align-items: center;
+}
+
+@media (max-width:1080px){
+  body {
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+      'header-left header-left'
+      'main-left main-left'
+      'header-right main-right'
+      'footer-left footer-left'
+      'footer-right footer-right'
+      ;
+    }
+
+    .gap{
+      display: none;
+    }
+
+    .table-title {
+      display: grid;
+      grid-area: table-title;
+      justify-self: center;
+      text-align: center;
+      align-self: center;
+      margin:0;
+    }
+
+    .achievements {
+      grid-area: achievements;
+    }
+
+    .main-right {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas:
+        'table-title'
+        'achievements';
+    }
+
+}
+
+
+@media (max-width: 720px) {
+  body{
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'header-left'
+    'main-left'
+    'header-right'
+    'main-right'
+    'footer-left'
+    'footer-right'
+    ;
+  }
+
+  .gap{
+    display: none;
+  }
+
+  .achievements{
+    grid-area: achievements;
+  }
+
+  .table-title{
+    grid-area: table-title;
+    justify-self: center;
+  }
+
+  .main-right{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'table-title'
+    'achievements';
+  }
+}
